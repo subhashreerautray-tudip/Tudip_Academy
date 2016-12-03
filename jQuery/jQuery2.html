@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+	$("p").hover(function(){
+    
+    	$("p").mousemove(function(){
+    
+    				$("p").mouseup(function(){
+        			$(this).css({"color":"yellow"});
+   					 });
+                     
+   					 $("p").mousedown(function(){
+      				 $(this).css({"color":"pink"});
+   					});
+                             
+            });
+	});
+                        
+ $("p").mouseleave(function(){
+ $(this).css({"color":"black"});
+  });
+                    
+});
+</script>
+</head>
+<body>
+
+<p draggable="true">Press down and release the mouse button over this div element.</p>
+
+</body>
+</html>
