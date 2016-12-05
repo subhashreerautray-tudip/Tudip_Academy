@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table, td {
+    border: 2px solid black;
+    text-align: center;
+    border-collapse: collapse;
+    padding: 5px;
+    margin:auto;
+    empty-cells: hide;
+}
+th{
+  padding: 12px;
+  text-align:center;
+  background-color:#4db8ff;
+  color: white;
+  border: 2px solid #ddd;
+}
+tr:nth-child(even)
+{background-color: #f2f2f2;
+padding: 5px;
+}
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+input[type=number]{
+  margin: auto;
+  }
+  input:
+  focus {
+    background-color: #e6f2ff;}
+    input:hover{border-color:#3333cc;
+                box-shadow: 5px 5px 5px #888888}
+                button:hover{border-color: #66ffff;
+                box-shadow: 5px 5px 5px #888888}
+button{
+    width: 100%;
+    background-color:#ff9966;
+    color: black;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-size:10px;
+}
+div {
+  overflow-x:auto;
+    border-radius: 5px;
+   background-image: url("wall.jpg");
+    padding: 50px;
+    width:500px;
+    margin: auto;
+    box-shadow: 10px 10px 5px #888888;
+}
+h2{
+  text-align: center;
+}
+
+tr:nth-child(even) {background-color: #f2f2f2}
+</style>
+</head>
+<body>
+<div>
+ <h2>Registration form</h2>
+  <label for="id">ID</label>
+<input type="number" id="id" placeholder="id">
+ <br>
+  <label for="name">Name</label>
+<input type="text" id="name" placeholder="name">
+
+<label for="age">Age</label>
+<input type="text" id="age" placeholder="age">
+<button onclick="myFunction()">Register</button>
+<table id="myTable">
+<caption>Student Data</caption>
+  <tr>
+    <th>ID</th>
+    <th>NAME</th>
+    <th>AGE</th>
+  </tr>
+</table>
+</div>
+<script>
+function myFunction() {
+  var xmlhttp ;
+var url = "ajax.html";
+ //console.log(xmlhttp);
+  if (window.XMLHttpRequest) {
+    // code for modern browsers
+    xmlhttp = new XMLHttpRequest();
+    } else {
+    // code for IE6, IE5
+    xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+  }
+xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+	 var id1 = document.getElementById("id").value;
+     var name1 = document.getElementById("name").value;
+     var age1 = document.getElementById("age").value;
+    var table = document.getElementById("myTable");
+    var row = table.insertRow(1);
+    var cell1 = row.insertCell(0);
+    var cell2 = row.insertCell(1);
+    var cell3 = row.insertCell(2);
+    cell1.innerHTML = id1;
+    cell2.innerHTML = name1;
+     cell3.innerHTML = age1;
+     }
+};
+xmlhttp.open("GET", url, true);
+xmlhttp.send();
+}
+</script>
+
+</body>
+</html>
