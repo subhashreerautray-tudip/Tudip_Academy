@@ -1,0 +1,90 @@
+<html>
+<head>
+<style>
+div{
+	position:absolute;
+    top: 10%;
+    left: 40%;
+}
+.image{
+  width:120px;height:50px;
+}
+#b1,#b2{
+   border-radius:20%;
+   background-color: Transparent;
+
+   border:none;
+}
+#b2{
+  margin-left:133px;
+}
+.main {
+    border-radius: 50%;
+}
+h1{
+  text-align: center;
+}
+#theCount, #theCount2{
+    width:31px;
+    height:30px;
+    text-align: center;
+    color:black;
+  position:absolute;
+    top: 94%;
+    left:0%;
+}
+#theCount2{
+  left:66%;
+}
+.main{
+  border-radius:20px;
+}
+</style>
+ 
+<script>
+   function like()
+   {
+           
+            if(typeof(Storage) !== "undefined") 
+            {
+        if (localStorage.clickcount1) {
+            localStorage.clickcount1 = Number(localStorage.clickcount1)+1;
+        } 
+        else {
+            localStorage.clickcount1 = 1;
+        }
+        document.getElementById("theCount").innerHTML= localStorage.clickcount1 ;
+   				  					}
+   }
+function dislike()
+   {
+           
+            if(typeof(Storage) !== "undefined") 
+            {
+        if (localStorage.clickcount2) {
+            localStorage.clickcount2 = Number(localStorage.clickcount2)+1;
+        } 
+        else {
+            localStorage.clickcount2 = 1;
+        }
+        document.getElementById("theCount2").innerHTML= localStorage.clickcount2;
+   				
+            					}
+   }
+   </script>
+</head>
+<body>
+	<div>
+<h1>Like or dislike</h1>
+<img src="paris.jpg" class="main">
+		<br>
+			<button id=b1 onclick="like()"><img src="like.jpg" class="image">
+			</button>
+			<button id=b2 onclick="dislike()"><img src="unlike.jpg" class="image">
+			</button>
+			<br>
+		<div id="theCount"></div>
+		<div id="theCount2"></div>
+	</div>
+</body>
+</html>
