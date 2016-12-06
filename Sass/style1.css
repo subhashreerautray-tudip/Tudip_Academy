@@ -1,0 +1,53 @@
+#main {
+  background-color: #cc00cc;
+}
+#main #div1 {
+  float: left;
+}
+#main nav {
+  padding: 20px;
+}
+#main nav strong {
+  margin: 110px;
+  padding-top: 20px;
+  font-size: 26px solid #ddd;
+}
+#main nav strong ul {
+  margin-left: 600px;
+  list-style-type: none;
+  margin-top: 20px;
+  padding: 0;
+  overflow: hidden;
+  background-color: red;
+}
+#main nav strong ul li {
+  list-style-type: none;
+  float: left;
+}
+#main nav strong ul li li a {
+  display: block;
+  color: yellow;
+  text-align: center;
+  padding: 6px;
+  text-decoration: none;
+}
+#main nav strong ul li li a li a:hover {
+  background-color: #111111;
+}
+
+#div2 {
+  margin-top: 50px;
+  backgroud-color: cyan;
+}
+#div2 .container {
+  backgroud-color: #cc00cc;
+  width: 40%;
+  margin: auto;
+}
+#div2 .container h2 {
+  color: red;
+}
+
+footer {
+  background-color: cyan;
+}
