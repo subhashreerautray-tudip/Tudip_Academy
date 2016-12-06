@@ -1,0 +1,89 @@
+$background-color:#cc00cc;
+@mixin font-size($width)
+{
+font-size:@width solid #ddd;
+}
+#main
+{
+background-color:$background-color;
+
+	#div1
+		{
+			float:left;
+		}
+	nav
+	{ 
+	padding:20px;
+	
+	  strong
+	  {
+	  margin:110px;
+	  padding-top:20px;
+	  @include font-size(26px);
+ul {
+
+   margin-left:600px;
+   list-style-type: none;
+ 
+   margin-top:20px;
+    
+   padding: 0;
+    
+   overflow: hidden;
+   
+   background-color: red;
+
+   
+li{
+
+	list-style-type:none;
+	
+float:left;
+	li a {
+
+  	display: block;
+    
+	color:yellow;  
+	text-align: center;
+  
+	padding: 6px;
+   
+	text-decoration: none;
+li a:hover {
+   
+	    background-color: #111111;
+
+	   }
+     			
+}
+
+
+  
+}
+
+   }
+ 
+	   }
+   
+	}
+}
+#div2
+{
+	margin-top:50px;
+	backgroud-color:cyan;
+	.container
+		{
+			backgroud-color:@background-color;
+			width:40%;
+	      	        margin:auto;
+
+h2{
+color:red;
+}
+		}
+}
+
+footer
+	{
+	 background-color:cyan;
+	}
